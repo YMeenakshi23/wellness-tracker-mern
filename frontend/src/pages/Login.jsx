@@ -1,7 +1,7 @@
 // Path: wellness-tracker/frontend/src/pages/Login.jsx
 
 import React, { useState, useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // <<< Import Link
 import AuthContext from '../context/AuthContext.jsx';
 
 function Login() {
@@ -79,6 +79,11 @@ function Login() {
                         </button>
                     </div>
                 </form>
+                <div className="text-center text-sm">
+                    <Link to="/forgot-password" className="font-medium text-indigo-600 hover:text-indigo-500"> {/* <<< NEW LINK */}
+                        Forgot Password?
+                    </Link>
+                </div>
             </div>
         </div>
     );
